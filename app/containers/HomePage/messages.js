@@ -10,6 +10,10 @@ export const scope = 'app.containers.HomePage';
 export default defineMessages({
   header: {
     id: `${scope}.header`,
-    defaultMessage: 'This is the HomePage container!',
+    defaultMessage: 'Github App!',
+  },
+  username: {
+    id: `${scope}.username`,
+    defaultMessage: 'Github username @',
   },
 });
