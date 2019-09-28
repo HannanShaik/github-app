@@ -19,7 +19,7 @@ export default function HomePage() {
       <h1>
         <FormattedMessage {...messages.header} />
       </h1>
-      <Form onSubmit={() => { }}>
+      <Form onSubmit={() => {}}>
         <label htmlFor="username">
           <AtPrefix>
             <FormattedMessage {...messages.username} />
@@ -28,7 +28,7 @@ export default function HomePage() {
             id="username"
             type="text"
             placeholder="hannanshaik"
-            onChange={() => { }}
+            onChange={() => {}}
           />
         </label>
       </Form>
