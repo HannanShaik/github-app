@@ -3,7 +3,7 @@ import {
   CHANGE_USERNAME,
   LOAD_REPOS_SUCCESS,
   LOAD_REPOS,
-  LOAD_REPOS_ERROR,
+  ERROR,
 } from './actions';
 
 // The initial state of the App
@@ -37,7 +37,7 @@ const homeReducer = (state = initialState, action) =>
         draft.currentUser = action.username;
         break;
 
-      case LOAD_REPOS_ERROR:
+      case ERROR:
         draft.error = action.error;
         draft.loading = false;
         break;

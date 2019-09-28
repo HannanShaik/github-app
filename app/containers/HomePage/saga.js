@@ -3,7 +3,13 @@
  */
 import { call, put, select, takeLatest } from 'redux-saga/effects';
 import request from 'utils/request';
-import { LOAD_REPOS, reposLoaded, repoLoadingError } from './actions';
+import {
+  LOAD_REPOS,
+  LOAD_ORGS,
+  reposLoaded,
+  loadingError,
+  orgsLoaded,
+} from './actions';
 import { userNameSelector } from './selectors';
 
 export function* getRepos() {
@@ -16,7 +22,21 @@ export function* getRepos() {
     const repos = yield call(request, requestURL);
     yield put(reposLoaded(repos, username));
   } catch (err) {
-    yield put(repoLoadingError(err));
+    yield put(loadingError(err));
+  }
+}
+
+export function* getOrgs() {
+  // Select username from store
+  const username = yield select(userNameSelector());
+  const requestURL = `https://api.github.com/users/${username}/orgs?type=all&sort=updated`;
+
+  try {
+    // Call our request helper (see 'utils/request')
+    const orgs = yield call(request, requestURL);
+    yield put(orgsLoaded(orgs, username));
+  } catch (err) {
+    yield put(loadingError(err));
   }
 }
 
@@ -25,4 +45,5 @@ export function* getRepos() {
  */
 export default function* githubData() {
   yield takeLatest(LOAD_REPOS, getRepos);
+  yield takeLatest(LOAD_ORGS, getOrgs);
 }

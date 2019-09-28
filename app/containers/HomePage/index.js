@@ -12,7 +12,7 @@ import { connect } from 'react-redux';
 import { createStructuredSelector } from 'reselect';
 import { useInjectReducer } from 'utils/injectReducer';
 import { useInjectSaga } from 'utils/injectSaga';
-import { loadRepos, changeUsername } from './actions';
+import { loadRepos, loadOrgs, changeUsername } from './actions';
 import messages from './messages';
 import CenteredSection from '../../components/CenteredSection';
 import Form from '../../components/Form';
@@ -84,6 +84,7 @@ export function mapDispatchToProps(dispatch) {
     onSubmitForm: evt => {
       if (evt !== undefined && evt.preventDefault) evt.preventDefault();
       dispatch(loadRepos());
+      dispatch(loadOrgs());
     },
   };
 }
