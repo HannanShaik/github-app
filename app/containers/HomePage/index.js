@@ -52,7 +52,7 @@ export function HomePage({ username, onSubmitForm, onChangeUsername }) {
           <Input
             id="username"
             type="text"
-            placeholder="mxstbr"
+            placeholder="hannanshaik"
             value={username}
             onChange={onChangeUsername}
           />

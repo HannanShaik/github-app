@@ -1,0 +1,109 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`getOrgs Saga should call the loadingError action if the response errors 1`] = `
+Object {
+  "@@redux-saga/IO": true,
+  "combinator": false,
+  "payload": Object {
+    "args": Array [],
+    "selector": [Function],
+  },
+  "type": "SELECT",
+}
+`;
+
+exports[`getOrgs Saga should call the loadingError action if the response errors 2`] = `
+Object {
+  "@@redux-saga/IO": true,
+  "combinator": false,
+  "payload": Object {
+    "args": Array [
+      "https://api.github.com/users/hannanshaik/orgs?type=all&sort=updated",
+    ],
+    "context": null,
+    "fn": [Function],
+  },
+  "type": "CALL",
+}
+`;
+
+exports[`getOrgs Saga should dispatch the orgsLoaded action if it requests the data successfully 1`] = `
+Object {
+  "@@redux-saga/IO": true,
+  "combinator": false,
+  "payload": Object {
+    "args": Array [],
+    "selector": [Function],
+  },
+  "type": "SELECT",
+}
+`;
+
+exports[`getOrgs Saga should dispatch the orgsLoaded action if it requests the data successfully 2`] = `
+Object {
+  "@@redux-saga/IO": true,
+  "combinator": false,
+  "payload": Object {
+    "args": Array [
+      "https://api.github.com/users/hannanshaik/orgs?type=all&sort=updated",
+    ],
+    "context": null,
+    "fn": [Function],
+  },
+  "type": "CALL",
+}
+`;
+
+exports[`getRepos Saga should call the loadingError action if the response errors 1`] = `
+Object {
+  "@@redux-saga/IO": true,
+  "combinator": false,
+  "payload": Object {
+    "args": Array [],
+    "selector": [Function],
+  },
+  "type": "SELECT",
+}
+`;
+
+exports[`getRepos Saga should call the loadingError action if the response errors 2`] = `
+Object {
+  "@@redux-saga/IO": true,
+  "combinator": false,
+  "payload": Object {
+    "args": Array [
+      "https://api.github.com/users/hannanshaik/repos?type=all&sort=updated",
+    ],
+    "context": null,
+    "fn": [Function],
+  },
+  "type": "CALL",
+}
+`;
+
+exports[`getRepos Saga should dispatch the reposLoaded action if it requests the data successfully 1`] = `
+Object {
+  "@@redux-saga/IO": true,
+  "combinator": false,
+  "payload": Object {
+    "args": Array [],
+    "selector": [Function],
+  },
+  "type": "SELECT",
+}
+`;
+
+exports[`getRepos Saga should dispatch the reposLoaded action if it requests the data successfully 2`] = `
+Object {
+  "@@redux-saga/IO": true,
+  "combinator": false,
+  "payload": Object {
+    "args": Array [
+      "https://api.github.com/users/hannanshaik/repos?type=all&sort=updated",
+    ],
+    "context": null,
+    "fn": [Function],
+  },
+  "type": "CALL",
+}
+`;
