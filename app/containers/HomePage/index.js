@@ -18,6 +18,7 @@ import CenteredSection from '../../components/CenteredSection';
 import Form from '../../components/Form';
 import Input from '../../components/Input';
 import AtPrefix from '../../components/AtPrefix';
+import List from '../../components/List';
 
 import {
   userNameSelector,
@@ -30,7 +31,14 @@ import saga from './saga';
 
 const key = 'home';
 
-export function HomePage({ username, onSubmitForm, onChangeUsername }) {
+export function HomePage({
+  username,
+  onSubmitForm,
+  onChangeUsername,
+  repos,
+  error,
+  loading,
+}) {
   useInjectReducer({ key, reducer });
   useInjectSaga({ key, saga });
 
@@ -57,6 +65,14 @@ export function HomePage({ username, onSubmitForm, onChangeUsername }) {
             onChange={onChangeUsername}
           />
         </label>
+        {loading && <p>loading...</p>}
+        {error && <p>Error Occured: {error}</p>}
+        {repos && (
+          <div>
+            <h3>Repositories</h3>
+            <List items={repos} />
+          </div>
+        )}
       </Form>
     </CenteredSection>
   );

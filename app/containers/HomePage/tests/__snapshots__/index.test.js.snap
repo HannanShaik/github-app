@@ -30,6 +30,18 @@ exports[`<HomePage /> should render and match the snapshot 1`] = `
         value=""
       />
     </label>
+    <div>
+      <h3>
+        Repositories
+      </h3>
+      <div
+        class="List__Wrapper-sc-1xjtles-0 eWFsZc"
+      >
+        <ul
+          class="List__Ul-sc-1xjtles-1 hrTBIH"
+        />
+      </div>
+    </div>
   </form>
 </section>
 `;
