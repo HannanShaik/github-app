@@ -1,10 +1,10 @@
 {
-  "name": "react-boilerplate",
+  "name": "github-app",
   "version": "4.0.0",
-  "description": "A highly scalable, offline-first foundation with the best DX and a focus on performance and best practices",
+  "description": "A Simple Github app. ",
   "repository": {
     "type": "git",
-    "url": "git://github.com/react-boilerplate/react-boilerplate.git"
+    "url": "git://github.com/HannanShaik/github-app.git"
   },
   "engines": {
     "npm": ">=5",
