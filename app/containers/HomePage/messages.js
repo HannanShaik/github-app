@@ -14,7 +14,7 @@ export default defineMessages({
   },
   username: {
     id: `${scope}.username`,
-    defaultMessage: 'Github username @',
+    defaultMessage: 'Enter Github username @',
   },
   repositories: {
     id: `${scope}.repositories`,
