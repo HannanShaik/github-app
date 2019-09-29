@@ -2,7 +2,7 @@
 
 exports[`<HomePage /> should render and match the snapshot 1`] = `
 <section
-  class="Section-fxu4zi-0 CenteredSection-uroeek-0 joHOKy"
+  class="Section-sc-926gb3-0 CenteredSection-sc-1v37xy5-0 bFkkFm"
 >
   <h1>
     <span>
@@ -10,20 +10,20 @@ exports[`<HomePage /> should render and match the snapshot 1`] = `
     </span>
   </h1>
   <form
-    class="Form-xkjev1-0 fYsATz"
+    class="Form-lxfvvp-0 jjHXOB"
   >
     <label
       for="username"
     >
       <span
-        class="AtPrefix-sc-143gs49-0 gaCczF"
+        class="AtPrefix-sc-1c37cot-0 fzLJt"
       >
         <span>
-          Github username @
+          Enter Github username @
         </span>
       </span>
       <input
-        class="Input-vmw8ts-0 fiVKko"
+        class="Input-cmtoom-0 hFKhUb"
         id="username"
         placeholder="hannanshaik"
         type="text"
@@ -37,10 +37,10 @@ exports[`<HomePage /> should render and match the snapshot 1`] = `
         </span>
       </h3>
       <div
-        class="List__Wrapper-sc-1xjtles-0 eWFsZc"
+        class="List__Wrapper-sc-1x4ok71-0 dypyZp"
       >
         <ul
-          class="List__Ul-sc-1xjtles-1 hrTBIH"
+          class="List__Ul-sc-1x4ok71-1 hbhnfW"
         />
       </div>
     </div>
@@ -51,10 +51,10 @@ exports[`<HomePage /> should render and match the snapshot 1`] = `
         </span>
       </h3>
       <div
-        class="List__Wrapper-sc-1xjtles-0 eWFsZc"
+        class="List__Wrapper-sc-1x4ok71-0 dypyZp"
       >
         <ul
-          class="List__Ul-sc-1xjtles-1 hrTBIH"
+          class="List__Ul-sc-1x4ok71-1 hbhnfW"
         />
       </div>
     </div>
@@ -64,7 +64,7 @@ exports[`<HomePage /> should render and match the snapshot 1`] = `
 
 exports[`<HomePage /> should render and match the snapshot when error comes 1`] = `
 <section
-  class="Section-fxu4zi-0 CenteredSection-uroeek-0 joHOKy"
+  class="Section-sc-926gb3-0 CenteredSection-sc-1v37xy5-0 bFkkFm"
 >
   <h1>
     <span>
@@ -72,20 +72,20 @@ exports[`<HomePage /> should render and match the snapshot when error comes 1`] 
     </span>
   </h1>
   <form
-    class="Form-xkjev1-0 fYsATz"
+    class="Form-lxfvvp-0 jjHXOB"
   >
     <label
       for="username"
     >
       <span
-        class="AtPrefix-sc-143gs49-0 gaCczF"
+        class="AtPrefix-sc-1c37cot-0 fzLJt"
       >
         <span>
-          Github username @
+          Enter Github username @
         </span>
       </span>
       <input
-        class="Input-vmw8ts-0 fiVKko"
+        class="Input-cmtoom-0 hFKhUb"
         id="username"
         placeholder="hannanshaik"
         type="text"
@@ -101,7 +101,7 @@ exports[`<HomePage /> should render and match the snapshot when error comes 1`] 
 
 exports[`<HomePage /> should render and match the snapshot while loading 1`] = `
 <section
-  class="Section-fxu4zi-0 CenteredSection-uroeek-0 joHOKy"
+  class="Section-sc-926gb3-0 CenteredSection-sc-1v37xy5-0 bFkkFm"
 >
   <h1>
     <span>
@@ -109,20 +109,20 @@ exports[`<HomePage /> should render and match the snapshot while loading 1`] = `
     </span>
   </h1>
   <form
-    class="Form-xkjev1-0 fYsATz"
+    class="Form-lxfvvp-0 jjHXOB"
   >
     <label
       for="username"
     >
       <span
-        class="AtPrefix-sc-143gs49-0 gaCczF"
+        class="AtPrefix-sc-1c37cot-0 fzLJt"
       >
         <span>
-          Github username @
+          Enter Github username @
         </span>
       </span>
       <input
-        class="Input-vmw8ts-0 fiVKko"
+        class="Input-cmtoom-0 hFKhUb"
         id="username"
         placeholder="hannanshaik"
         type="text"
