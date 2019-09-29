@@ -22,12 +22,12 @@ const Ul = styled.ul`
   padding: 0 1em;
 `;
 
-function List({ items }) {
+function List({ items, type }) {
   return (
     <Wrapper>
       <Ul>
         {items.map(item => (
-          <ListItem key={`item-${item.id}`} item={item} />
+          <ListItem key={`item-${item.id}`} item={item} type={type} />
         ))}
       </Ul>
     </Wrapper>
@@ -36,6 +36,7 @@ function List({ items }) {
 
 List.propTypes = {
   items: PropTypes.any,
+  type: PropTypes.string,
 };
 
 export default List;

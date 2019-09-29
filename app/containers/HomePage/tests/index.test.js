@@ -9,7 +9,7 @@ import { Provider } from 'react-redux';
 import { browserHistory } from 'react-router-dom';
 
 import { HomePage, mapDispatchToProps } from '../index';
-import { changeUsername, loadRepos } from '../actions';
+import { changeUsername, loadRepos, loadOrgs } from '../actions';
 
 import configureStore from '../../../configureStore';
 
@@ -26,7 +26,33 @@ describe('<HomePage />', () => {
     } = render(
       <Provider store={store}>
         <IntlProvider locale="en">
-          <HomePage loading={false} error={false} repos={[]} />
+          <HomePage loading={false} error={false} repos={[]} orgs={[]} />
+        </IntlProvider>
+      </Provider>,
+    );
+    expect(firstChild).toMatchSnapshot();
+  });
+
+  it('should render and match the snapshot while loading', () => {
+    const {
+      container: { firstChild },
+    } = render(
+      <Provider store={store}>
+        <IntlProvider locale="en">
+          <HomePage loading error={false} />
+        </IntlProvider>
+      </Provider>,
+    );
+    expect(firstChild).toMatchSnapshot();
+  });
+
+  it('should render and match the snapshot when error comes', () => {
+    const {
+      container: { firstChild },
+    } = render(
+      <Provider store={store}>
+        <IntlProvider locale="en">
+          <HomePage error={{ error: 'API Error' }} />
         </IntlProvider>
       </Provider>,
     );
@@ -101,11 +127,12 @@ describe('<HomePage />', () => {
         expect(result.onSubmitForm).toBeDefined();
       });
 
-      it('should dispatch loadRepos when called', () => {
+      it('should dispatch loadRepos and loadOrgs when called', () => {
         const dispatch = jest.fn();
         const result = mapDispatchToProps(dispatch);
         result.onSubmitForm();
         expect(dispatch).toHaveBeenCalledWith(loadRepos());
+        expect(dispatch).toHaveBeenCalledWith(loadOrgs());
       });
 
       it('should preventDefault if called with event', () => {

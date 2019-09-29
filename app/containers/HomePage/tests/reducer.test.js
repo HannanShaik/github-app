@@ -4,6 +4,8 @@ import homeReducer from '../reducer';
 import {
   changeUsername,
   loadRepos,
+  loadOrgs,
+  orgsLoaded,
   reposLoaded,
   loadingError,
 } from '../actions';
@@ -19,6 +21,7 @@ describe('homeReducer', () => {
       currentUser: false,
       userData: {
         repositories: false,
+        organizations: false,
       },
     };
   });
@@ -65,7 +68,35 @@ describe('homeReducer', () => {
     );
   });
 
-  it('should handle the repoLoadingError action correctly', () => {
+  it('should handle the loadOrgs action correctly', () => {
+    const expectedResult = produce(state, draft => {
+      draft.loading = true;
+      draft.error = false;
+      draft.userData.organizations = false;
+    });
+
+    expect(homeReducer(state, loadOrgs())).toEqual(expectedResult);
+  });
+
+  it('should handle the orgsLoaded action correctly', () => {
+    const fixture = [
+      {
+        login: 'My Repo',
+      },
+    ];
+    const username = 'test';
+    const expectedResult = produce(state, draft => {
+      draft.userData.organizations = fixture;
+      draft.loading = false;
+      draft.currentUser = username;
+    });
+
+    expect(homeReducer(state, orgsLoaded(fixture, username))).toEqual(
+      expectedResult,
+    );
+  });
+
+  it('should handle the loading error action correctly', () => {
     const fixture = {
       msg: 'Not found',
     };

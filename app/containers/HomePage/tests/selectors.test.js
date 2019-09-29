@@ -5,6 +5,7 @@ import {
   reposSelector,
   errorSelector,
   loadingSelector,
+  orgsSelector,
 } from '../selectors';
 
 describe('selectHome', () => {
@@ -83,5 +84,20 @@ describe('reposSelector', () => {
       },
     };
     expect(reposSelectorInstance(mockedState)).toEqual(repositories);
+  });
+});
+
+describe('orgsSelector', () => {
+  const orgsSelectorInstance = orgsSelector();
+  it('should select the repos', () => {
+    const organizations = [];
+    const mockedState = {
+      home: {
+        userData: {
+          organizations,
+        },
+      },
+    };
+    expect(orgsSelectorInstance(mockedState)).toEqual(organizations);
   });
 });

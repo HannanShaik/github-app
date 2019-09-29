@@ -23,16 +23,21 @@ const Wrapper = styled.li`
   }
 `;
 
-function ListItem({ item }) {
+function ListItem({ item, type }) {
   return (
     <Wrapper>
-      <Item> {`${item.owner.login}/${item.name}`}</Item>
+      <Item>
+        {type === 'repos'
+          ? `${item.owner.login}/${item.name}`
+          : `${item.login}`}
+      </Item>
     </Wrapper>
   );
 }
 
 ListItem.propTypes = {
   item: PropTypes.any,
+  type: PropTypes.string,
 };
 
 export default ListItem;

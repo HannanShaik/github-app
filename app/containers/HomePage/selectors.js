@@ -37,6 +37,12 @@ const reposSelector = () =>
     homeState => homeState.userData.repositories,
   );
 
+const orgsSelector = () =>
+  createSelector(
+    selectHome,
+    homeState => homeState.userData.organizations,
+  );
+
 export {
   selectHome,
   currentUserSelector,
@@ -44,4 +50,5 @@ export {
   errorSelector,
   reposSelector,
   userNameSelector,
+  orgsSelector,
 };

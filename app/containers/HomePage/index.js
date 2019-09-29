@@ -25,6 +25,7 @@ import {
   reposSelector,
   loadingSelector,
   errorSelector,
+  orgsSelector,
 } from './selectors';
 import reducer from './reducer';
 import saga from './saga';
@@ -36,6 +37,7 @@ export function HomePage({
   onSubmitForm,
   onChangeUsername,
   repos,
+  orgs,
   error,
   loading,
 }) {
@@ -66,11 +68,21 @@ export function HomePage({
           />
         </label>
         {loading && <p>loading...</p>}
-        {error && <p>Error Occured: {error}</p>}
+        {error && <p>Error Occured</p>}
         {repos && (
           <div>
-            <h3>Repositories</h3>
-            <List items={repos} />
+            <h3>
+              <FormattedMessage {...messages.repositories} />
+            </h3>
+            <List items={repos} type="repos" />
+          </div>
+        )}
+        {orgs && (
+          <div>
+            <h3>
+              <FormattedMessage {...messages.organizations} />
+            </h3>
+            <List items={orgs} type="orgs" />
           </div>
         )}
       </Form>
@@ -85,10 +97,12 @@ HomePage.propTypes = {
   onSubmitForm: PropTypes.func,
   username: PropTypes.string,
   onChangeUsername: PropTypes.func,
+  orgs: PropTypes.oneOfType([PropTypes.array, PropTypes.bool]),
 };
 
 const mapStateToProps = createStructuredSelector({
   repos: reposSelector(),
+  orgs: orgsSelector(),
   username: userNameSelector(),
   loading: loadingSelector(),
   error: errorSelector(),

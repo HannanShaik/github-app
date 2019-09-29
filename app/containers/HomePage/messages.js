@@ -16,4 +16,12 @@ export default defineMessages({
     id: `${scope}.username`,
     defaultMessage: 'Github username @',
   },
+  repositories: {
+    id: `${scope}.repositories`,
+    defaultMessage: 'List of Repositories',
+  },
+  organizations: {
+    id: `${scope}.organizations`,
+    defaultMessage: 'List of Organizations',
+  },
 });

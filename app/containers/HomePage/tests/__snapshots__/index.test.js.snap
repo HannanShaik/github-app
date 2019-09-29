@@ -32,7 +32,9 @@ exports[`<HomePage /> should render and match the snapshot 1`] = `
     </label>
     <div>
       <h3>
-        Repositories
+        <span>
+          List of Repositories
+        </span>
       </h3>
       <div
         class="List__Wrapper-sc-1xjtles-0 eWFsZc"
@@ -42,6 +44,94 @@ exports[`<HomePage /> should render and match the snapshot 1`] = `
         />
       </div>
     </div>
+    <div>
+      <h3>
+        <span>
+          List of Organizations
+        </span>
+      </h3>
+      <div
+        class="List__Wrapper-sc-1xjtles-0 eWFsZc"
+      >
+        <ul
+          class="List__Ul-sc-1xjtles-1 hrTBIH"
+        />
+      </div>
+    </div>
+  </form>
+</section>
+`;
+
+exports[`<HomePage /> should render and match the snapshot when error comes 1`] = `
+<section
+  class="Section-fxu4zi-0 CenteredSection-uroeek-0 joHOKy"
+>
+  <h1>
+    <span>
+      Github App!
+    </span>
+  </h1>
+  <form
+    class="Form-xkjev1-0 fYsATz"
+  >
+    <label
+      for="username"
+    >
+      <span
+        class="AtPrefix-sc-143gs49-0 gaCczF"
+      >
+        <span>
+          Github username @
+        </span>
+      </span>
+      <input
+        class="Input-vmw8ts-0 fiVKko"
+        id="username"
+        placeholder="hannanshaik"
+        type="text"
+        value=""
+      />
+    </label>
+    <p>
+      Error Occured
+    </p>
+  </form>
+</section>
+`;
+
+exports[`<HomePage /> should render and match the snapshot while loading 1`] = `
+<section
+  class="Section-fxu4zi-0 CenteredSection-uroeek-0 joHOKy"
+>
+  <h1>
+    <span>
+      Github App!
+    </span>
+  </h1>
+  <form
+    class="Form-xkjev1-0 fYsATz"
+  >
+    <label
+      for="username"
+    >
+      <span
+        class="AtPrefix-sc-143gs49-0 gaCczF"
+      >
+        <span>
+          Github username @
+        </span>
+      </span>
+      <input
+        class="Input-vmw8ts-0 fiVKko"
+        id="username"
+        placeholder="hannanshaik"
+        type="text"
+        value=""
+      />
+    </label>
+    <p>
+      loading...
+    </p>
   </form>
 </section>
 `;
