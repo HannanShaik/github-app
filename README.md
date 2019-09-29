@@ -22,6 +22,14 @@ npm run start
 #or 
 
 yarn start
+
+#Run Tests
+
+npm run test
+
+#or 
+
+yarn test
 ```
 
 ### Implemented the following
